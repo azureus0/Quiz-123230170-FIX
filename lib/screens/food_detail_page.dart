@@ -86,6 +86,7 @@ class FoodMenuDetailPage extends StatelessWidget {
                         ],
                       ),
                     ),
+                    
                   ),
                 ],
               ),

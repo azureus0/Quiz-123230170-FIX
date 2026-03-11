@@ -20,7 +20,24 @@ class ProfilePage extends StatelessWidget {
                 username,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 12),
+
+              Text(
+                    'NIM: 123230170',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+              SizedBox(height: 4),
+              Text(
+                    'Hobby: Drawing',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
