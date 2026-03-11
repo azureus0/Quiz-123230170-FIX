@@ -67,7 +67,14 @@ class FoodMenuDetailPage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FoodMenuDetailPage(foodMenu: foodMenu),
+                        ),);
+                      },
                       //onPressed: _foodList,
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -77,6 +84,7 @@ class FoodMenuDetailPage extends StatelessWidget {
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
+
                         children: [
                           const Icon(Icons.shop, color: Colors.white, size: 16),
                           Text(
@@ -86,7 +94,6 @@ class FoodMenuDetailPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    
                   ),
                 ],
               ),
