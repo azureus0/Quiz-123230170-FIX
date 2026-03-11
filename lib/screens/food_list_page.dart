@@ -106,7 +106,11 @@ class _FoodMenuListItemState extends State<FoodMenuListItem> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            '${widget.foodMenu.category} ${widget.foodMenu.price}',
+                            widget.foodMenu.category,
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Rp ${widget.foodMenu.price}',
                           ),
                           SizedBox(height: 8),
                         ],
@@ -117,11 +121,11 @@ class _FoodMenuListItemState extends State<FoodMenuListItem> {
               ),
             ),
             Positioned(
-              top: 0,
-              right: 0,
+              top: 50,
+              right: 50,
               child: IconButton(
                 icon: Icon(
-                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                  isBookmarked ? Icons.arrow_forward_ios : Icons.arrow_forward_ios,
                   color: isBookmarked ? Colors.blue : Colors.grey,
                 ),
                 onPressed: () {

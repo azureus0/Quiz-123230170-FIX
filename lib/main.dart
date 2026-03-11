@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:latihan_kuis_a/screen/login_page.dart';
 import './screens/login_page.dart';
 
 void main() {
@@ -12,13 +11,15 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
           primary: Colors.black,
           secondary: Colors.black,
         ),
       ),
-      home: LoginPage(),
-    );
+      home: LoginPage());
   }
 }
+
+

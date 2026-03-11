@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/user_model.dart';
 //import 'package:latihan_kuis_a/screen/movie_list_page.dart';
 import './food_list_page.dart';
+import './root.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -36,11 +37,15 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: Colors.green,
         ),
       );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => FoodListPage(username: username),
+      //   ),
+      // );
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => FoodListPage(username: username),
-        ),
+        MaterialPageRoute(builder: (context) => Root(username: username,)),
       );
     } else {
       setState(() {
@@ -75,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.black,
                 ),
               ),
-              
+
               const SizedBox(height: 20),
 
               TextField(

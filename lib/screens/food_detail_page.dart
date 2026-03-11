@@ -13,7 +13,7 @@ class FoodMenuDetailPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Food Details',
+          'Detail Menu',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
@@ -35,32 +35,56 @@ class FoodMenuDetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${foodMenu.name} (${foodMenu.name})',
+                    foodMenu.name,
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+
                   Text(
-                    'Directed by ${foodMenu.category}',
+                    foodMenu.category,
                     style: const TextStyle(color: Colors.grey),
                   ),
-                  const SizedBox(height: 12),
-                  Text(foodMenu.description),
-                  const SizedBox(height: 12),
 
                   const SizedBox(height: 12),
+
+                  Text(
+                    'Rp ${foodMenu.price}',
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange,
+                    ),
+                  ),
+
+                  const SizedBox(height: 12),
+
+                  Text(foodMenu.description),
+
+                  const SizedBox(height: 12),
+
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {},
+                      //onPressed: _foodList,
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero,
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                        backgroundColor: Colors.grey[300],
+                        backgroundColor: Colors.orange,
                       ),
-                      child: const Text('Go to Wikipedia'),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.shop, color: Colors.white, size: 16),
+                          Text(
+                            'Pesan Sekarang',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
